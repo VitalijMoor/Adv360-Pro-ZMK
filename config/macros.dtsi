@@ -225,44 +225,44 @@ Double_Click: Double_Click {
 
 // ───── Lowercase ─────
 umlaut_a: umlaut_a {
-    compatible = "zmk,behavior-macro";
+    compatible = "zmkbehavior-macro";
     label = "UM_A";
-    bindings = <&kp LALT, &kp N0, &kp N2, &kp N2, &kp N8, &kp LALT>;
+    bindings = <&kp LALT &kp N0 &kp N2 &kp N2 &kp N8 &kp LALT>;
 };
 
 umlaut_o: umlaut_o {
-    compatible = "zmk,behavior-macro";
+    compatible = "zmkbehavior-macro";
     label = "UM_O";
-    bindings = <&kp LALT, &kp N0, &kp N2, &kp N4, &kp N6, &kp LALT>;
+    bindings = <&kp LALT &kp N0 &kp N2 &kp N4 &kp N6 &kp LALT>;
 };
 
 umlaut_u: umlaut_u {
-    compatible = "zmk,behavior-macro";
+    compatible = "zmkbehavior-macro";
     label = "UM_U";
-    bindings = <&kp LALT, &kp N0, &kp N2, &kp N5, &kp N2, &kp LALT>;
+    bindings = <&kp LALT &kp N0 &kp N2 &kp N5 &kp N2 &kp LALT>;
 };
 
 umlaut_ss: umlaut_ss {
-    compatible = "zmk,behavior-macro";
+    compatible = "zmkbehavior-macro";
     label = "UM_SS";
-    bindings = <&kp LALT, &kp N0, &kp N2, &kp N2, &kp N3, &kp LALT>;
+    bindings = <&kp LALT &kp N0 &kp N2 &kp N2 &kp N3 &kp LALT>;
 };
 
 // ───── Uppercase ─────
 umlaut_a_cap: umlaut_a_cap {
-    compatible = "zmk,behavior-macro";
+    compatible = "zmkbehavior-macro";
     label = "UM_A_CAP";
-    bindings = <&kp LALT, &kp N0, &kp N1, &kp N9, &kp N6, &kp LALT>;
+    bindings = <&kp LALT &kp N0 &kp N1 &kp N9 &kp N6 &kp LALT>;
 };
 
 umlaut_o_cap: umlaut_o_cap {
-    compatible = "zmk,behavior-macro";
+    compatible = "zmkbehavior-macro";
     label = "UM_O_CAP";
-    bindings = <&kp LALT, &kp N0, &kp N2, &kp N1, &kp N4, &kp LALT>;
+    bindings = <&kp LALT &kp N0 &kp N2 &kp N1 &kp N4 &kp LALT>;
 };
 
 umlaut_u_cap: umlaut_u_cap {
-    compatible = "zmk,behavior-macro";
+    compatible = "zmkbehavior-macro";
     label = "UM_U_CAP";
-    bindings = <&kp LALT, &kp N0, &kp N2, &kp N2, &kp N0, &kp LALT>;
+    bindings = <&kp LALT &kp N0 &kp N2 &kp N2 &kp N0 &kp LALT>;
 };
