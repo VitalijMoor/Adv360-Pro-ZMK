@@ -223,75 +223,74 @@ Double_Click: Double_Click {
   display-name = "Double Click";
 };
 
-
 // ───── Lowercase ─────
 umlaut_a: umlaut_a {
-  compatible = "zmk,behavior-macro";
-  label = "UM_A";
-  bindings = <
-    &kp LALT,
-    &kp N0PAD0 &kp N0PAD2 &kp N0PAD2 &kp N0PAD8,
-    &kp LALT
-  >;
+    compatible = "zmk,behavior-macro";
+    label = "UM_A";
+    bindings = <
+        &kp LALT,
+        &kp KP_0, &kp KP_2, &kp KP_2, &kp KP_8,
+        &kp LALT
+    >;
 };
 
 umlaut_o: umlaut_o {
-  compatible = "zmk,behavior-macro";
-  label = "UM_O";
-  bindings = <
-    &kp LALT,
-    &kp N0PAD0 &kp N0PAD2 &kp N0PAD4 &kp N0PAD6,
-    &kp LALT
-  >;
+    compatible = "zmk,behavior-macro";
+    label = "UM_O";
+    bindings = <
+        &kp LALT,
+        &kp KP_0, &kp KP_2, &kp KP_4, &kp KP_6,
+        &kp LALT
+    >;
 };
 
 umlaut_u: umlaut_u {
-  compatible = "zmk,behavior-macro";
-  label = "UM_U";
-  bindings = <
-    &kp LALT,
-    &kp N0PAD0 &kp N0PAD2 &kp N0PAD5 &kp N0PAD2,
-    &kp LALT
-  >;
+    compatible = "zmk,behavior-macro";
+    label = "UM_U";
+    bindings = <
+        &kp LALT,
+        &kp KP_0, &kp KP_2, &kp KP_5, &kp KP_2,
+        &kp LALT
+    >;
 };
 
 umlaut_ss: umlaut_ss {
-  compatible = "zmk,behavior-macro";
-  label = "UM_SS";
-  bindings = <
-    &kp LALT,
-    &kp N0PAD0 &kp N0PAD2 &kp N0PAD2 &kp N0PAD3,
-    &kp LALT
-  >;
+    compatible = "zmk,behavior-macro";
+    label = "UM_SS";
+    bindings = <
+        &kp LALT,
+        &kp KP_0, &kp KP_2, &kp KP_2, &kp KP_3,
+        &kp LALT
+    >;
 };
 
 // ───── Uppercase ─────
 umlaut_a_cap: umlaut_a_cap {
-  compatible = "zmk,behavior-macro";
-  label = "UM_A_CAP";
-  bindings = <
-    &kp LALT,
-    &kp N0PAD0 &kp N0PAD1 &kp N0PAD9 &kp N0PAD6,
-    &kp LALT
-  >;
+    compatible = "zmk,behavior-macro";
+    label = "UM_A_CAP";
+    bindings = <
+        &kp LALT,
+        &kp KP_0, &kp KP_1, &kp KP_9, &kp KP_6,
+        &kp LALT
+    >;
 };
 
 umlaut_o_cap: umlaut_o_cap {
-  compatible = "zmk,behavior-macro";
-  label = "UM_O_CAP";
-  bindings = <
-    &kp LALT,
-    &kp N0PAD0 &kp N0PAD2 &kp N0PAD1 &kp N0PAD4,
-    &kp LALT
-  >;
+    compatible = "zmk,behavior-macro";
+    label = "UM_O_CAP";
+    bindings = <
+        &kp LALT,
+        &kp KP_0, &kp KP_2, &kp KP_1, &kp KP_4,
+        &kp LALT
+    >;
 };
 
 umlaut_u_cap: umlaut_u_cap {
-  compatible = "zmk,behavior-macro";
-  label = "UM_U_CAP";
-  bindings = <
-    &kp LALT,
-    &kp N0PAD0 &kp N0PAD2 &kp N0PAD2 &kp N0PAD0,
-    &kp LALT
-  >;
+    compatible = "zmk,behavior-macro";
+    label = "UM_U_CAP";
+    bindings = <
+        &kp LALT,
+        &kp KP_0, &kp KP_2, &kp KP_2, &kp KP_0,
+        &kp LALT
+    >;
 };
