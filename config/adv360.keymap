@@ -28,28 +28,26 @@
       #include "macros.dtsi"
       #include "version.dtsi"
 
+      /* ── Shift‑aware umlaut behaviors ── */
       MM_UM_A: modmorph_umlaut_a {
-          compatible = "zmk,behavior-mod-morph";
-          label = "MM_UM_A";
-          #binding-cells = <0>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-          bindings = <&umlaut_a &umlaut_a_cap>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        bindings = <&umlaut_a &umlaut_a_cap>;
       };
 
       MM_UM_O: modmorph_umlaut_o {
-          compatible = "zmk,behavior-mod-morph";
-          label = "MM_UM_O";
-          #binding-cells = <0>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-          bindings = <&umlaut_o &umlaut_o_cap>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        bindings = <&umlaut_o &umlaut_o_cap>;
       };
 
       MM_UM_U: modmorph_umlaut_u {
-          compatible = "zmk,behavior-mod-morph";
-          label = "MM_UM_U";
-          #binding-cells = <0>;
-          mods = <(MOD_LSFT|MOD_RSFT)>;
-          bindings = <&umlaut_u &umlaut_u_cap>;
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        bindings = <&umlaut_u &umlaut_u_cap>;
       };
 
       hm: homerow_mods {
