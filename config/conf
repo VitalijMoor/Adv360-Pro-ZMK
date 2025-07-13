@@ -1,0 +1,3 @@
+# --- extra features used below ---
+CONFIG_ZMK_MACRO=y              # enables macros
+CONFIG_ZMK_BEHAVIOR_HOLD_TAP=y  # lets macros hold Alt while typing digits
