@@ -225,44 +225,51 @@ Double_Click: Double_Click {
 
 // ───── Lowercase ─────
 umlaut_a: umlaut_a {
-    compatible = "zmkbehavior-macro";
+    compatible = "zmk,behavior-macro";
     label = "UM_A";
-    bindings = <&kp LALT &kp N0 &kp N2 &kp N2 &kp N8 &kp LALT>;
+    #binding-cells = <0>;
+    bindings = <&press LALT, &kp N0, &kp N2, &kp N2, &kp N8, &release LALT>;
 };
 
 umlaut_o: umlaut_o {
-    compatible = "zmkbehavior-macro";
+    compatible = "zmk,behavior-macro";
     label = "UM_O";
-    bindings = <&kp LALT &kp N0 &kp N2 &kp N4 &kp N6 &kp LALT>;
+    #binding-cells = <0>;
+    bindings = <&press LALT, &kp N0, &kp N2, &kp N4, &kp N6, &release LALT>;
 };
 
 umlaut_u: umlaut_u {
-    compatible = "zmkbehavior-macro";
+    compatible = "zmk,behavior-macro";
     label = "UM_U";
-    bindings = <&kp LALT &kp N0 &kp N2 &kp N5 &kp N2 &kp LALT>;
+    #binding-cells = <0>;
+    bindings = <&press LALT, &kp N0, &kp N2, &kp N5, &kp N2, &release LALT>;
 };
 
 umlaut_ss: umlaut_ss {
-    compatible = "zmkbehavior-macro";
+    compatible = "zmk,behavior-macro";
     label = "UM_SS";
-    bindings = <&kp LALT &kp N0 &kp N2 &kp N2 &kp N3 &kp LALT>;
+    #binding-cells = <0>;
+    bindings = <&press LALT, &kp N0, &kp N2, &kp N2, &kp N3, &release LALT>;
 };
 
 // ───── Uppercase ─────
 umlaut_a_cap: umlaut_a_cap {
-    compatible = "zmkbehavior-macro";
+    compatible = "zmk,behavior-macro";
     label = "UM_A_CAP";
-    bindings = <&kp LALT &kp N0 &kp N1 &kp N9 &kp N6 &kp LALT>;
+    #binding-cells = <0>;
+    bindings = <&press LALT, &kp N0, &kp N1, &kp N9, &kp N6, &release LALT>;
 };
 
 umlaut_o_cap: umlaut_o_cap {
-    compatible = "zmkbehavior-macro";
+    compatible = "zmk,behavior-macro";
     label = "UM_O_CAP";
-    bindings = <&kp LALT &kp N0 &kp N2 &kp N1 &kp N4 &kp LALT>;
+    #binding-cells = <0>;
+    bindings = <&press LALT, &kp N0, &kp N2, &kp N1, &kp N4, &release LALT>;
 };
 
 umlaut_u_cap: umlaut_u_cap {
-    compatible = "zmkbehavior-macro";
+    compatible = "zmk,behavior-macro";
     label = "UM_U_CAP";
-    bindings = <&kp LALT &kp N0 &kp N2 &kp N2 &kp N0 &kp LALT>;
+    #binding-cells = <0>;
+    bindings = <&press LALT, &kp N0, &kp N2, &kp N2, &kp N0, &release LALT>;
 };
