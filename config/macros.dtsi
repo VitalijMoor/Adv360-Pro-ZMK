@@ -261,4 +261,3 @@ umlaut_u_cap: umlaut_u_cap {
   #binding-cells = <0>;
   bindings = <&macro_typed_unicode 0x00DC>; /* Ü */
 };
-  };

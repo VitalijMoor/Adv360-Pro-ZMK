@@ -6,8 +6,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    #include "macros.dtsi"
     key-overrides {
+      #include "macros.dtsi"
+      #include "version.dtsi"
       compatible = "zmk,key-overrides";
 
       dot_colon: dot_colon {
@@ -26,6 +27,7 @@
     };
     
     behaviors {
+      #include "macros.dtsi"
       #include "version.dtsi"
 
       /* ── Shift‑aware umlaut behaviors ── */
