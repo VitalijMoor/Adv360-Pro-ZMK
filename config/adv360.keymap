@@ -6,6 +6,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    #include "macros.dtsi"
     key-overrides {
       compatible = "zmk,key-overrides";
 
@@ -25,7 +26,6 @@
     };
     
     behaviors {
-      #include "macros.dtsi"
       #include "version.dtsi"
 
       /* ── Shift‑aware umlaut behaviors ── */
@@ -69,7 +69,7 @@
               bindings = <
   &kp ESC           &kp N1    &kp N2    &kp N3        &kp N4  &kp N5  &none                                                     &mo 3    &kp N6  &kp N7  &kp N8             &kp N9    &kp N0     &kp MINUS
   &kp TAB           &kp Q     &kp W     &kp E         &kp R   &kp T   &none                                                     &none    &kp Z   &kp U   &kp I              &kp O     &kp P      &MM_UM_U
-&kp BACKSPACE     &kp A     &kp S     &kp D         &kp F   &kp G   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp DEL  &kp H   &kp J   &kp K              &kp L     &MM_UM_O      &MM_UM_A
+&kp BACKSPACE     &kp A     &kp S     &kp D         &kp F   &kp G   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp DEL  &kp H   &kp J   &kp K              &kp L     &MM_UM_O     &MM_UM_A
 &kp LSHFT         &kp Y     &kp X     &kp C         &kp V   &kp B                         &kp HOME      &kp PG_UP                      &kp N   &kp M   &kp COMMA          &kp DOT   &kp MINUS  &kp RSHFT
 &kp LEFT_CONTROL  &kp LGUI  &kp CAPS  &kp LEFT_ALT  &mo 1           &kp SPACE  &mo 1      &kp END       &kp PG_DN  &mo 2      &kp RET          &mo 1   &kp RIGHT_CONTROL  &kp CAPS  &kp RGUI   &kp RIGHT_CONTROL
             >;
