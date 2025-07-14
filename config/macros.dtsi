@@ -243,7 +243,10 @@
       #binding-cells = <0>;
       wait-ms = <40>;
       tap-ms = <40>;
-      bindings = <&kp K>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+      bindings =
+        <&macro_press   &kp LALT>,
+        <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>,
+        <&macro_release &kp LALT>;
     };
 
     umlaut_u: umlaut_u {
@@ -276,7 +279,10 @@
       #binding-cells = <0>;
       wait-ms = <40>;
       tap-ms = <40>;
-      bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+      bindings =
+        <&macro_press   &kp LALT>,
+        <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4>,
+        <&macro_release &kp LALT>;
     };
 
     umlaut_u_cap: umlaut_u_cap {
