@@ -1,0 +1,13 @@
+# zmk,behavior-unicode-sequence.yaml
+compatible: "zmk,behavior-unicode-sequence"
+
+include: one_param.yaml
+
+description: Behavior for sending a Unicode codepoint
+
+properties:
+  bindings:
+    required: true
+    type: array
+    description: Unicode codepoints to type
+
