@@ -1,4 +1,4 @@
-macro_ae{
+macro_ae: macro_ae {
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -8,7 +8,7 @@ macro_ae{
   >;
 };
 
-macro_oe {
+macro_oe: macro_oe {
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -18,7 +18,7 @@ macro_oe {
   >;
 };
 
-macro_ue {
+macro_ue: macro_ue {
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -28,7 +28,7 @@ macro_ue {
   >;
 };
 
-macro_ae_cap {
+macro_ae_cap: macro_ae_cap {
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -38,7 +38,7 @@ macro_ae_cap {
   >;
 };
 
-macro_oe_cap {
+mmacro_oe_cap: acro_oe_cap {
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -48,7 +48,7 @@ macro_oe_cap {
   >;
 };
 
-macro_ue_cap {
+mmacro_ue_cap: acro_ue_cap {
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
