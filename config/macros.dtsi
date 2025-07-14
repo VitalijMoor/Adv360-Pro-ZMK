@@ -38,7 +38,7 @@ macro_ae_cap: macro_ae_cap {
   >;
 };
 
-mmacro_oe_cap: macro_oe_cap {
+macro_oe_cap: macro_oe_cap {
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -48,7 +48,7 @@ mmacro_oe_cap: macro_oe_cap {
   >;
 };
 
-mmacro_ue_cap: macro_ue_cap {
+macro_ue_cap: macro_ue_cap {
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
