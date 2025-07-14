@@ -51,43 +51,43 @@ Double_Click: Double_Click {
 // ── Unicode Umlauts ──
 umlaut_a: umlaut_a {
   compatible = "zmk,behavior-unicode-sequence";
-  #binding-cells = <0>;
+  #binding-cells = <1>;
   bindings = <0x00E4>; // ä
 };
 
 umlaut_o: umlaut_o {
   compatible = "zmk,behavior-unicode-sequence";
-  #binding-cells = <0>;
+  #binding-cells = <1>;
   bindings = <0x00F6>; // ö
 };
 
 umlaut_u: umlaut_u {
   compatible = "zmk,behavior-unicode-sequence";
-  #binding-cells = <0>;
+  #binding-cells = <1>;
   bindings = <0x00FC>; // ü
 };
 
 umlaut_ss: umlaut_ss {
   compatible = "zmk,behavior-unicode-sequence";
-  #binding-cells = <0>;
+  #binding-cells = <1>;
   bindings = <0x00DF>; // ß
 };
 
 umlaut_a_cap: umlaut_a_cap {
   compatible = "zmk,behavior-unicode-sequence";
-  #binding-cells = <0>;
+  #binding-cells = <1>;
   bindings = <0x00C4>; // Ä
 };
 
 umlaut_o_cap: umlaut_o_cap {
   compatible = "zmk,behavior-unicode-sequence";
-  #binding-cells = <0>;
+  #binding-cells = <1>;
   bindings = <0x00D6>; // Ö
 };
 
 umlaut_u_cap: umlaut_u_cap {
   compatible = "zmk,behavior-unicode-sequence";
-  #binding-cells = <0>;
+  #binding-cells = <1>;
   bindings = <0x00DC>; // Ü
 };
 
