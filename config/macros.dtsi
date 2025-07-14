@@ -1,4 +1,5 @@
 macro_ae: macro_ae {
+  #binding-cells = <0>;
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -9,6 +10,7 @@ macro_ae: macro_ae {
 };
 
 macro_oe: macro_oe {
+  #binding-cells = <0>;
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -19,6 +21,7 @@ macro_oe: macro_oe {
 };
 
 macro_ue: macro_ue {
+  #binding-cells = <0>;
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -29,6 +32,7 @@ macro_ue: macro_ue {
 };
 
 macro_ae_cap: macro_ae_cap {
+  #binding-cells = <0>;
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -39,6 +43,7 @@ macro_ae_cap: macro_ae_cap {
 };
 
 macro_oe_cap: macro_oe_cap {
+  #binding-cells = <0>;
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
@@ -49,6 +54,7 @@ macro_oe_cap: macro_oe_cap {
 };
 
 macro_ue_cap: macro_ue_cap {
+  #binding-cells = <0>;
   wait-ms = <40>;
   tap-ms = <40>;
   bindings = <
