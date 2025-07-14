@@ -6,8 +6,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    #include "macros.dtsi"
-    #include "version.dtsi"
     key-overrides {
       compatible = "zmk,key-overrides";
 
@@ -27,6 +25,8 @@
     };
     
     behaviors {
+      #include "macros.dtsi"
+      #include "version.dtsi"
       /* ── Shift‑aware umlaut behaviors ── */
       MM_UM_A: mm_umlaut_a {
         compatible = "zmk,behavior-mod-morph";
