@@ -1,0 +1,36 @@
+/ {
+  behaviors {
+    colon_if_shifted: colon_if_shifted {
+      compatible = "zmk,behavior-mod-morph";
+      bindings = <&kp DOT &kp COLON>;
+      mods = <MOD_LSFT MOD_RSFT>;
+    };
+
+    semicolon_if_shifted: semicolon_if_shifted {
+      compatible = "zmk,behavior-mod-morph";
+      bindings = <&kp COMMA &kp SEMI>;
+      mods = <MOD_LSFT MOD_RSFT>;
+    };
+
+    /* ───────────────  ä / Ä  ─────────────── */
+    umlaut_a_shifted: umlaut_a_shifted {
+      compatible = "zmk,behavior-mod-morph";
+      bindings   = <&umlaut_a &umlaut_A>;      /* normal , shifted */
+      mods       = <MOD_LSFT MOD_RSFT>;        /* react to either Shift */
+    };
+
+    /* ───────────────  ö / Ö  ─────────────── */
+    umlaut_o_shifted: umlaut_o_shifted {
+      compatible = "zmk,behavior-mod-morph";
+      bindings   = <&umlaut_o &umlaut_O>;
+      mods       = <MOD_LSFT MOD_RSFT>;
+    };
+
+    /* ───────────────  ü / Ü  ─────────────── */
+    umlaut_u_shifted: umlaut_u_shifted {
+      compatible = "zmk,behavior-mod-morph";
+      bindings   = <&umlaut_u &umlaut_U>;
+      mods       = <MOD_LSFT MOD_RSFT>;
+    };
+  };
+};
