@@ -1,8 +1,3 @@
-unicode_input: unicode_input {
-  compatible = "zmk,behavior-unicode-sequence";
-  #binding-cells = <1>;
-};
-
 // ── Utility Macros ──
 macro_quotes: macro_quotes {
   compatible = "zmk,behavior-macro";
@@ -55,45 +50,45 @@ Double_Click: Double_Click {
 
 // ── Unicode Umlauts ──
 umlaut_a: umlaut_a {
-  compatible = "zmk,behavior-macro";
+  compatible = "zmk,behavior-unicode-sequence";
   #binding-cells = <0>;
-  bindings = <&unicode_input 0x00E4>; // ä
+  bindings = <0x00E4>; // ä
 };
 
 umlaut_o: umlaut_o {
-  compatible = "zmk,behavior-macro";
+  compatible = "zmk,behavior-unicode-sequence";
   #binding-cells = <0>;
-  bindings = <&unicode_input 0x00F6>; // ö
+  bindings = <0x00F6>; // ö
 };
 
 umlaut_u: umlaut_u {
-  compatible = "zmk,behavior-macro";
+  compatible = "zmk,behavior-unicode-sequence";
   #binding-cells = <0>;
-  bindings = <&unicode_input 0x00FC>; // ü
+  bindings = <0x00FC>; // ü
 };
 
 umlaut_ss: umlaut_ss {
-  compatible = "zmk,behavior-macro";
+  compatible = "zmk,behavior-unicode-sequence";
   #binding-cells = <0>;
-  bindings = <&unicode_input 0x00DF>; // ß
+  bindings = <0x00DF>; // ß
 };
 
 umlaut_a_cap: umlaut_a_cap {
-  compatible = "zmk,behavior-macro";
+  compatible = "zmk,behavior-unicode-sequence";
   #binding-cells = <0>;
-  bindings = <&unicode_input 0x00C4>; // Ä
+  bindings = <0x00C4>; // Ä
 };
 
 umlaut_o_cap: umlaut_o_cap {
-  compatible = "zmk,behavior-macro";
+  compatible = "zmk,behavior-unicode-sequence";
   #binding-cells = <0>;
-  bindings = <&unicode_input 0x00D6>; // Ö
+  bindings = <0x00D6>; // Ö
 };
 
 umlaut_u_cap: umlaut_u_cap {
-  compatible = "zmk,behavior-macro";
+  compatible = "zmk,behavior-unicode-sequence";
   #binding-cells = <0>;
-  bindings = <&unicode_input 0x00DC>; // Ü
+  bindings = <0x00DC>; // Ü
 };
 
 // ── Windows Macros ──
