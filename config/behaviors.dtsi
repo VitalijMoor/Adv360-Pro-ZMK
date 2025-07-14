@@ -10,7 +10,7 @@
     semicolon_if_shifted: semicolon_if_shifted {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp COMMA &kp SEMICOLON>;
+      bindings = <&kp COMMA &kp SEMI>;
       mods = <0x03>; // MOD_LSFT | MOD_RSFT
     };
 
