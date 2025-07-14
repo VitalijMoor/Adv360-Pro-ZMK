@@ -1,4 +1,4 @@
-wait-ms-20 {
+wait_ms_20: wait_ms_20 {
   compatible = "zmk,behavior-wait-ms";
   #binding-cells = <0>;
   wait-ms = <20>;
@@ -10,10 +10,10 @@ umlaut_a {
   bindings = <
     &macro_press &kp LALT
     &macro_tap
-    &kp KP_0 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_8
+      &kp KP_0 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_8
     &macro_release &kp LALT
   >;
 };
@@ -24,10 +24,10 @@ umlaut_o {
   bindings = <
     &macro_press &kp LALT
     &macro_tap
-    &kp KP_0 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_4 &wait-ms-20
-    &kp KP_6
+      &kp KP_0 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_4 &wait_ms_20
+      &kp KP_6
     &macro_release &kp LALT
   >;
 };
@@ -38,10 +38,10 @@ umlaut_u {
   bindings = <
     &macro_press &kp LALT
     &macro_tap
-    &kp KP_0 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_5 &wait-ms-20
-    &kp KP_2
+      &kp KP_0 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_5 &wait_ms_20
+      &kp KP_2
     &macro_release &kp LALT
   >;
 };
@@ -52,10 +52,10 @@ umlaut_ss {
   bindings = <
     &macro_press &kp LALT
     &macro_tap
-    &kp KP_0 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_3
+      &kp KP_0 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_3
     &macro_release &kp LALT
   >;
 };
@@ -66,10 +66,10 @@ umlaut_a_cap {
   bindings = <
     &macro_press &kp LALT
     &macro_tap
-    &kp KP_0 &wait-ms-20
-    &kp KP_1 &wait-ms-20
-    &kp KP_9 &wait-ms-20
-    &kp KP_6
+      &kp KP_0 &wait_ms_20
+      &kp KP_1 &wait_ms_20
+      &kp KP_9 &wait_ms_20
+      &kp KP_6
     &macro_release &kp LALT
   >;
 };
@@ -80,10 +80,10 @@ umlaut_o_cap {
   bindings = <
     &macro_press &kp LALT
     &macro_tap
-    &kp KP_0 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_1 &wait-ms-20
-    &kp KP_4
+      &kp KP_0 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_1 &wait_ms_20
+      &kp KP_4
     &macro_release &kp LALT
   >;
 };
@@ -94,10 +94,11 @@ umlaut_u_cap {
   bindings = <
     &macro_press &kp LALT
     &macro_tap
-    &kp KP_0 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_2 &wait-ms-20
-    &kp KP_0
+      &kp KP_0 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_2 &wait_ms_20
+      &kp KP_0
     &macro_release &kp LALT
   >;
 };
+
