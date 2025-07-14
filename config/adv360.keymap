@@ -33,19 +33,19 @@
     };
 
     cap_oe: cap_oe {
-      compatible = "zmk,behavior-mod-morph"; 
+      compatible = "zmk,behavior-macros"; 
       mods = <(MOD_LSFT|MOD_RSFT)>; 
       #binding-cells = <0>;
       bindings = <&macro_oe>, <&macro_oe_cap>;
     };
     cap_ae: cap_ae {
-      compatible = "zmk,behavior-mod-morph"; 
+      compatible = "zmk,behavior-macros"; 
       mods = <(MOD_LSFT|MOD_RSFT)>; 
       #binding-cells = <0>;
       bindings = <&macro_ae>, <&macro_ae_cap>;
     };
     cap_ue: cap_ue {
-      compatible = "zmk,behavior-mod-morph"; 
+      compatible = "zmk,behavior-macros"; 
       mods = <(MOD_LSFT|MOD_RSFT)>; 
       #binding-cells = <0>;
       bindings = <&macro_ue>, <&macro_ue_cap>;
