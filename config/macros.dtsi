@@ -44,7 +44,8 @@ Double_Click {
 umlaut_a {
   compatible = "zmk,behavior-macro";
   #binding-cells = <0>;
-  wait-ms = <40>; tap-ms = <40>;
+  wait-ms = <40>; 
+  tap-ms = <40>;
   bindings = <&macro_press &kp LALT>,
     <&macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_8>,
     <&macro_release &kp LALT>;
@@ -53,7 +54,8 @@ umlaut_a {
 umlaut_o {
   compatible = "zmk,behavior-macro";
   #binding-cells = <0>;
-  wait-ms = <40>; tap-ms = <40>;
+  wait-ms = <40>; 
+  tap-ms = <40>;
   bindings = <&macro_press &kp LALT>,
     <&macro_tap &kp KP_0 &kp KP_2 &kp KP_4 &kp KP_6>,
     <&macro_release &kp LALT>;
@@ -62,7 +64,8 @@ umlaut_o {
 umlaut_u {
   compatible = "zmk,behavior-macro";
   #binding-cells = <0>;
-  wait-ms = <40>; tap-ms = <40>;
+  wait-ms = <40>; 
+  tap-ms = <40>;
   bindings = <&macro_press &kp LALT>,
     <&macro_tap &kp KP_0 &kp KP_2 &kp KP_5 &kp KP_2>,
     <&macro_release &kp LALT>;
@@ -71,7 +74,8 @@ umlaut_u {
 umlaut_ss {
   compatible = "zmk,behavior-macro";
   #binding-cells = <0>;
-  wait-ms = <40>; tap-ms = <40>;
+  wait-ms = <40>; 
+  tap-ms = <40>;
   bindings = <&macro_press &kp LALT>,
     <&macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_3>,
     <&macro_release &kp LALT>;
@@ -80,16 +84,18 @@ umlaut_ss {
 umlaut_a_cap {
   compatible = "zmk,behavior-macro";
   #binding-cells = <0>;
-  wait-ms = <40>; tap-ms = <40>;
+  wait-ms = <40>; 
+  tap-ms = <40>;
   bindings = <&macro_press &kp LALT>,
     <&macro_tap &kp KP_0 &kp KP_1 &kp KP_9 &kp KP_6>,
-    <&macro_release &kp LALT>;
-};
+      <&macro_release &kp LALT>;
+  };
 
-umlaut_o_cap {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  wait-ms = <40>; tap-ms = <40>;
+  umlaut_o_cap {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <40>; 
+  tap-ms = <40>;
   bindings = <&macro_press &kp LALT>,
     <&macro_tap &kp KP_0 &kp KP_2 &kp KP_1 &kp KP_4>,
     <&macro_release &kp LALT>;
@@ -98,7 +104,8 @@ umlaut_o_cap {
 umlaut_u_cap {
   compatible = "zmk,behavior-macro";
   #binding-cells = <0>;
-  wait-ms = <40>; tap-ms = <40>;
+  wait-ms = <40>; 
+  tap-ms = <40>;
   bindings = <&macro_press &kp LALT>,
     <&macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_0>,
     <&macro_release &kp LALT>;
