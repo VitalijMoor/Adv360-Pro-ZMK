@@ -6,85 +6,123 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    /* Bring in all your macro definitions once, at the *top‑level* */
-    #include "macros.dtsi"
-    #include "version.dtsi"
+  /* Make all the macro behaviors visible BEFORE we refer to them */
+  #include "macros.dtsi"
+  #include "version.dtsi"
 
-    /* ────────────────────────── Key‑Overrides ───────────────────────── */
-    key-overrides {
-        compatible = "zmk,key-overrides";
+  key-overrides {
+    compatible = "zmk,key-overrides";
+    dot_colon: dot_colon {
+      compatible      = "zmk,key-override";
+      if-pressed      = <&kp DOT>;
+      and-modifiers   = <(MOD_LSFT|MOD_RSFT)>;
+      then-pressed    = <&kp COLON>;
+    };
+    comma_semicolon: comma_semicolon {
+      compatible      = "zmk,key-override";
+      if-pressed      = <&kp COMMA>;
+      and-modifiers   = <(MOD_LSFT|MOD_RSFT)>;
+      then-pressed    = <&kp SEMI>;
+    };
+  };
 
-        dot_colon: dot_colon {
-            compatible     = "zmk,key-override";
-            if-pressed     = <&kp DOT>;
-            and-modifiers  = <(MOD_LSFT|MOD_RSFT)>;
-            then-pressed   = <&kp COLON>;
-        };
-
-        comma_semicolon: comma_semicolon {
-            compatible     = "zmk,key-override";
-            if-pressed     = <&kp COMMA>;
-            and-modifiers  = <(MOD_LSFT|MOD_RSFT)>;
-            then-pressed   = <&kp SEMI>;
-        };
+  behaviors {
+    /* ── Shift‑aware umlaut mod‑morphs (reuse umlaut_* defined above) ── */
+    MM_UM_A: mm_umlaut_a {
+      compatible      = "zmk,behavior-mod-morph";
+      #binding-cells  = <0>;
+      mods            = <(MOD_LSFT|MOD_RSFT)>;
+      bindings        = <&umlaut_a &umlaut_a_cap>;
+    };
+    MM_UM_O: mm_umlaut_o {
+      compatible      = "zmk,behavior-mod-morph";
+      #binding-cells  = <0>;
+      mods            = <(MOD_LSFT|MOD_RSFT)>;
+      bindings        = <&umlaut_o &umlaut_o_cap>;
+    };
+    MM_UM_U: mm_umlaut_u {
+      compatible      = "zmk,behavior-mod-morph";
+      #binding-cells  = <0>;
+      mods            = <(MOD_LSFT|MOD_RSFT)>;
+      bindings        = <&umlaut_u &umlaut_u_cap>;
     };
 
-    /* ────────────────────────── Behaviors ───────────────────────────── */
-    behaviors {
+    hm: homerow_mods {
+      compatible      = "zmk,behavior-hold-tap";
+      label           = "HOMEROW_MODS";
+      #binding-cells  = <2>;
+      tapping-term-ms = <200>;
+      flavor          = "tap-preferred";
+      bindings        = <&kp>, <&kp>;
+    };
+  };
 
-        /* Shift‑aware “mod‑morph” wrappers that point at the new umlaut
-         * Alt‑code macros.  These stay exactly the same – only the
-         * underlying macros changed. */
-        MM_UM_A: mm_umlaut_a {
-            compatible      = "zmk,behavior-mod-morph";
-            #binding-cells  = <0>;
-            mods            = <(MOD_LSFT|MOD_RSFT)>;
-            bindings        = <&umlaut_a &umlaut_a_cap>;
-        };
+  keymap {
+    compatible = "zmk,keymap";
 
-        MM_UM_O: mm_umlaut_o {
-            compatible      = "zmk,behavior-mod-morph";
-            #binding-cells  = <0>;
-            mods            = <(MOD_LSFT|MOD_RSFT)>;
-            bindings        = <&umlaut_o &umlaut_o_cap>;
-        };
-
-        MM_UM_U: mm_umlaut_u {
-            compatible      = "zmk,behavior-mod-morph";
-            #binding-cells  = <0>;
-            mods            = <(MOD_LSFT|MOD_RSFT)>;
-            bindings        = <&umlaut_u &umlaut_u_cap>;
-        };
-
-        /* Homerow‑mod template (unchanged) */
-        hm: homerow_mods {
-            compatible        = "zmk,behavior-hold-tap";
-            label             = "HOMEROW_MODS";
-            #binding-cells    = <2>;
-            tapping-term-ms   = <200>;
-            flavor            = "tap-preferred";
-            bindings          = <&kp>, <&kp>;
-        };
+    default_layer {
+      display-name = "Base";
+      bindings = <
+        &kp ESC           &kp N1    &kp N2    &kp N3        &kp N4  &kp N5  &none                                                     &mo 3    &kp N6  &kp N7  &kp N8             &kp N9    &kp N0     &kp MINUS
+        &kp TAB           &kp Q     &kp W     &kp E         &kp R   &kp T   &none                                                     &none    &kp Z   &kp U   &kp I              &kp O     &kp P      &MM_UM_U
+        &kp BACKSPACE     &kp A     &kp S     &kp D         &kp F   &kp G   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp DEL  &kp H   &kp J   &kp K              &kp L     &MM_UM_O      &MM_UM_A
+        &kp LSHFT         &kp Y     &kp X     &kp C         &kp V   &kp B                         &kp HOME      &kp PG_UP                      &kp N   &kp M   &kp COMMA          &kp DOT   &kp MINUS  &kp RSHFT
+        &kp LEFT_CONTROL  &kp LGUI  &kp CAPS  &kp LEFT_ALT  &mo 1           &kp SPACE  &mo 1      &kp END       &kp PG_DN  &mo 2      &kp RET          &mo 1   &kp RIGHT_CONTROL  &kp CAPS  &kp RGUI   &kp RIGHT_CONTROL
+      >;
     };
 
-    /* ────────────────────────── Key‑maps / Layers ───────────────────── */
-    keymap {
-        compatible = "zmk,keymap";
-
-        /* Base layer (excerpt – only umlaut references changed) */
-        default_layer {
-            display-name = "Base";
-            bindings = <
-  &kp ESC           &kp N1    &kp N2    &kp N3        &kp N4  &kp N5  &none                                                     &mo 3    &kp N6  &kp N7  &kp N8             &kp N9    &kp N0     &kp MINUS
-  &kp TAB           &kp Q     &kp W     &kp E         &kp R   &kp T   &none                                                     &none    &kp Z   &kp U   &kp I              &kp O     &kp P      &MM_UM_U
-&kp BACKSPACE     &kp A     &kp S     &kp D         &kp F   &kp G   &none      &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp DEL  &kp H   &kp J   &kp K              &kp L     &MM_UM_O     &MM_UM_A
-&kp LSHFT         &kp Y     &kp X     &kp C         &kp V   &kp B                         &kp HOME      &kp PG_UP                      &kp N   &kp M   &kp COMMA          &kp DOT   &kp MINUS  &kp RSHFT
-&kp LEFT_CONTROL  &kp LGUI  &kp CAPS  &kp LEFT_ALT  &mo 1           &kp SPACE  &mo 1      &kp END       &kp PG_DN  &mo 2      &kp RET          &mo 1   &kp RIGHT_CONTROL  &kp CAPS  &kp RGUI   &kp RIGHT_CONTROL
-            >;
-        };
-
-        /* Remaining layers (‘keypad’, ‘fn’, ‘mod’, …) stay untouched */
-        /* … */
+    keypad {
+      display-name = "Kp";
+      bindings = <
+        &trans  &kp F1     &kp F2     &kp F3    &kp F4     &kp F5         &trans                                       &mo 3    &kp F6     &kp F7    &kp F8             &kp F9     &kp F10    &trans
+        &trans  &kp CARET  &kp ASTRK  &kp LT    &kp GT     &kp PIPE       &kp F11                                      &kp F12  &kp SQT    &kp LBKT  &kp RIGHT_BRACKET  &kp HASH   &kp PLUS   &kp EXCL
+        &trans  &kp DLLR   &kp SLASH  &kp LPAR  &kp RPAR   &kp BACKSLASH  &trans   &trans  &trans      &trans  &trans  &trans   &kp DQT    &kp LBRC  &kp RBRC           &kp PRCNT  &kp EQUAL  &trans
+        &trans  &trans     &trans     &trans    &kp GRAVE  &kp AMPERSAND                   &trans      &trans                   &kp TILDE  &kp AT    &kp UP             &trans     &trans     &trans
+        &trans  &trans     &trans     &trans    &trans                    &trans   &trans  &trans      &trans  &trans  &trans              &kp LEFT  &kp DOWN           &kp RIGHT  &trans     &trans
+      >;
     };
+
+    fn {
+      display-name = "Fn";
+      bindings = <
+        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+        &trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
+        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+      >;
+    };
+
+    mod {
+      display-name = "Mod";
+      bindings = <
+        &none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
+        &none           &none         &none         &none         &none         &none         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
+        &studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
+        &none           &none         &none         &none         &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
+        &none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+      >;
+    };
+
+    extra1 {
+      display-name = "Red";
+      status = "reserved";
+    };
+
+    extra2 {
+      display-name = "Purple";
+      status = "reserved";
+    };
+
+    extra3 {
+      display-name = "Cyan";
+      status = "reserved";
+    };
+
+    extra4 {
+      display-name = "Yellow";
+      status = "reserved";
+    };
+  };
 };
 
