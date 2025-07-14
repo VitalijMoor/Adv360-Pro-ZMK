@@ -2,7 +2,7 @@ description: Wait behavior for ZMK
 
 compatible: "zmk,behavior-wait-ms"
 
-include: base.yaml
+include: one_param.yaml
 
 properties:
   wait-ms:
