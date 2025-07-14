@@ -255,7 +255,7 @@
         <&macro_release &kp LALT>;
     };
 
-    umlaut_A: umlaut_A {
+    umlaut_a_cap: umlaut_a_cap {
       label = "Ä";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
@@ -265,7 +265,7 @@
         <&macro_release &kp LALT>;
     };
 
-    umlaut_O: umlaut_O {
+    umlaut_o_cap: umlaut_o_cap {
       label = "Ö";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
@@ -275,23 +275,13 @@
         <&macro_release &kp LALT>;
     };
 
-    umlaut_U: umlaut_U {
+    umlaut_u_cap: umlaut_u_cap {
       label = "Ü";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>,
-        <&macro_release &kp LALT>;
-    };
-
-    eszett: eszett {
-      label = "ß";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings =
-        <&macro_press   &kp LALT>,
-        <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3>,
         <&macro_release &kp LALT>;
     };
   };

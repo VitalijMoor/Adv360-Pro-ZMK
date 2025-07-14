@@ -18,7 +18,7 @@
     umlaut_a_shifted: umlaut_a_shifted {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&umlaut_a &umlaut_A>;
+      bindings = <&umlaut_a &umlaut_a_cap>;
       mods = <0x03>; // MOD_LSFT | MOD_RSFT
     };
 
@@ -26,7 +26,7 @@
     umlaut_o_shifted: umlaut_o_shifted {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&umlaut_o &umlaut_O>;
+      bindings = <&umlaut_o &umlaut_o_cap>;
       mods = <0x03>; // MOD_LSFT | MOD_RSFT
     };
 
@@ -34,7 +34,7 @@
     umlaut_u_shifted: umlaut_u_shifted {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&umlaut_u &umlaut_U>;
+      bindings = <&umlaut_u &umlaut_u_cap>;
       mods = <0x03>; // MOD_LSFT | MOD_RSFT
     };
   };
