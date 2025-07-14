@@ -229,6 +229,8 @@
       label = "ä";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
+      wait-ms = <40>;
+      tap-ms = <40>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>,
@@ -239,6 +241,8 @@
       label = "ö";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
+      wait-ms = <40>;
+      tap-ms = <40>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>,
@@ -249,6 +253,8 @@
       label = "ü";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
+      wait-ms = <40>;
+      tap-ms = <40>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>,
@@ -259,6 +265,8 @@
       label = "Ä";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
+      wait-ms = <40>;
+      tap-ms = <40>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>,
@@ -269,6 +277,8 @@
       label = "Ö";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
+      wait-ms = <40>;
+      tap-ms = <40>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4>,
@@ -279,6 +289,8 @@
       label = "Ü";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
+      wait-ms = <40>;
+      tap-ms = <40>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>,
