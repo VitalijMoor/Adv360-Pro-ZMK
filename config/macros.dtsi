@@ -1,135 +1,142 @@
+  / {
+      behaviors {
 
-    behaviors {
-
-        /* ───────────────────────── Utility “wrapper” macros ───────────────────── */
-        macro_quotes: macro_quotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
-        };
-
-        macro_dquotes: macro_dquotes {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
-        };
-
-        macro_braces: macro_braces {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
-        };
-
-        macro_parens: macro_parens {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
-        };
-
-        macro_brackets: macro_brackets {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
-        };
-
-        macro_kinesis: macro_kinesis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
-        };
-
-        Double_Click: Double_Click {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1 &mkp MB1>;
-        };
-
-          /* ─────────────────────────── Umlaut macros (Win Alt‑codes) ─────────────── */
-          umlaut_a: umlaut_a {
+          // ───── Wrapper-Makros ─────
+          macro_quotes {
               compatible = "zmk,behavior-macro";
               #binding-cells = <0>;
-              wait-ms = <40>; tap-ms = <40>;
-              bindings = <
-                  &macro_press &kp LALT
-                &macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_8
-                &macro_release &kp LALT
-            >;
-        };
+              bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
+          };
 
-        umlaut_o: umlaut_o {
+          macro_dquotes {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
+          };
+
+          macro_braces {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+          };
+
+          macro_parens {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
+          };
+
+          macro_brackets {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
+          };
+
+          macro_kinesis {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+          };
+
+          Double_Click {
+              compatible = "zmk,behavior-macro";
+              #binding-cells = <0>;
+              bindings = <&mkp MB1>, <&mkp MB1>;
+          };
+
+          // ───── Win‑Alt‑Code Umlaut-Makros ─────
+        umlaut_a {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>; tap-ms = <40>;
-            bindings = <
-                &macro_press &kp LALT
-                &macro_tap &kp KP_0 &kp KP_2 &kp KP_4 &kp KP_6
-                &macro_release &kp LALT
-            >;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_8>,
+                       <&macro_release &kp LALT>;
         };
 
-        umlaut_u: umlaut_u {
+        umlaut_o {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>; tap-ms = <40>;
-            bindings = <
-                &macro_press &kp LALT
-                &macro_tap &kp KP_0 &kp KP_2 &kp KP_5 &kp KP_2
-                &macro_release &kp LALT
-            >;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_0 &kp KP_2 &kp KP_4 &kp KP_6>,
+                       <&macro_release &kp LALT>;
         };
 
-        umlaut_ss: umlaut_ss {
+        umlaut_u {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>; tap-ms = <40>;
-            bindings = <
-                &macro_press &kp LALT
-                &macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_3
-                &macro_release &kp LALT
-            >;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_0 &kp KP_2 &kp KP_5 &kp KP_2>,
+                       <&macro_release &kp LALT>;
         };
 
-        umlaut_a_cap: umlaut_a_cap {
+        umlaut_ss {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>; tap-ms = <40>;
-            bindings = <
-                &macro_press &kp LALT
-                &macro_tap &kp KP_0 &kp KP_1 &kp KP_9 &kp KP_6
-                &macro_release &kp LALT
-            >;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_3>,
+                       <&macro_release &kp LALT>;
         };
 
-        umlaut_o_cap: umlaut_o_cap {
+        umlaut_a_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>; tap-ms = <40>;
-            bindings = <
-                &macro_press &kp LALT
-                &macro_tap &kp KP_0 &kp KP_2 &kp KP_1 &kp KP_4
-                &macro_release &kp LALT
-            >;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_0 &kp KP_1 &kp KP_9 &kp KP_6>,
+                       <&macro_release &kp LALT>;
         };
 
-        umlaut_u_cap: umlaut_u_cap {
+        umlaut_o_cap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <40>; tap-ms = <40>;
-            bindings = <
-                &macro_press &kp LALT
-                &macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_0
-                &macro_release &kp LALT
-            >;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_0 &kp KP_2 &kp KP_1 &kp KP_4>,
+                       <&macro_release &kp LALT>;
         };
 
-        /* ───────────────────────── Windows clipboard etc. ─────────────────────── */
-        Win_Cut: Windows_Cut  { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(X)>; };
-        Win_Copy: Windows_Copy { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(C)>; };
-        Win_Paste: Windows_Paste{ compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&kp LC(V)>; };
-        Win_Select_All: Windows_SelectAll{ compatible="zmk,behavior-macro"; #binding-cells=<0>; bindings=<&kp LC(A)>; };
-        Win_Undo: Windows_Undo { compatible="zmk,behavior-macro"; #binding-cells=<0>; bindings=<&kp LC(Z)>; };
+        umlaut_u_cap {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>; tap-ms = <40>;
+            bindings = <&macro_press &kp LALT>,
+                       <&macro_tap &kp KP_0 &kp KP_2 &kp KP_2 &kp KP_0>,
+                       <&macro_release &kp LALT>;
+        };
 
-        /* Weitere Makros können hier ergänzt werden */
+        // ───── Windows Makros ─────
+        Win_Cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>;
+        };
+
+        Win_Copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C)>;
+        };
+
+        Win_Paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>;
+        };
+
+        Win_Select_All {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A)>;
+        };
+
+        Win_Undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(Z)>;
+        };
     };
 };
-
