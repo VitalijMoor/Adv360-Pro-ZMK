@@ -1,7 +1,7 @@
 wait_ms_20: wait_ms_20 {
   compatible = "zmk,behavior-wait-ms";
   #binding-cells = <0>;
-  wait-ms = <20>;
+  bindings = <20>;
 };
 
 umlaut_a {
