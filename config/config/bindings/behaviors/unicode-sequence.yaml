@@ -1,3 +1,0 @@
-compatible: "zmk,behavior-unicode-sequence"
-include: one_param.yaml
-

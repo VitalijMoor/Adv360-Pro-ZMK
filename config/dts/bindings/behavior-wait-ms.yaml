@@ -1,0 +1,12 @@
+description: Wait behavior for ZMK
+
+compatible: "zmk,behavior-wait-ms"
+
+include: base.yaml
+
+properties:
+  wait-ms:
+    type: int
+    required: true
+    description: Time to wait in milliseconds
+
