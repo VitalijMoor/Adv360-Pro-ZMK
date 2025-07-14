@@ -228,6 +228,7 @@
     umlaut_a: umlaut_a {
       label = "ä";
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>,
@@ -237,6 +238,7 @@
     umlaut_o: umlaut_o {
       label = "ö";
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>,
@@ -246,6 +248,7 @@
     umlaut_u: umlaut_u {
       label = "ü";
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>,
@@ -255,6 +258,7 @@
     umlaut_A: umlaut_A {
       label = "Ä";
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N6>,
@@ -264,6 +268,7 @@
     umlaut_O: umlaut_O {
       label = "Ö";
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N4>,
@@ -273,6 +278,7 @@
     umlaut_U: umlaut_U {
       label = "Ü";
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N0>,
@@ -282,6 +288,7 @@
     eszett: eszett {
       label = "ß";
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings =
         <&macro_press   &kp LALT>,
         <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N3>,
