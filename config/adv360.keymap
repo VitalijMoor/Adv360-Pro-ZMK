@@ -12,7 +12,6 @@
 
     hm: homerow_mods {
       compatible = "zmk,behavior-hold-tap";
-      label = "HOMEROW_MODS";
       #binding-cells = <2>;
       tapping-term-ms = <200>;
       quick_tap_ms = <175>;
@@ -21,7 +20,6 @@
     };
     dotcol: dot_colon {
       compatible = "zmk,behavior-mod-morph"; 
-      label = "dotcol"; 
       mods = <(MOD_LSFT|MOD_RSFT)>; 
       #binding-cells = <0>;
       bindings = <&kp DOT>, <&kp COLON>;
@@ -29,7 +27,6 @@
 
     commasemi: comma_semicolon {
       compatible = "zmk,behavior-mod-morph"; 
-      label = "commasemi"; 
       mods = <(MOD_LSFT|MOD_RSFT)>; 
       #binding-cells = <0>;
       bindings = <&kp COMMA>, <&kp SEMICOLON>;
@@ -37,21 +34,18 @@
 
     cap_oe: cap_oe {
       compatible = "zmk,behavior-mod-morph"; 
-      label = "cap_oe"; 
       mods = <(MOD_LSFT|MOD_RSFT)>; 
       #binding-cells = <0>;
       bindings = <&macro_oe>, <&macro_oe_cap>;
     };
     cap_ae: cap_ae {
       compatible = "zmk,behavior-mod-morph"; 
-      label = "cap_ae"; 
       mods = <(MOD_LSFT|MOD_RSFT)>; 
       #binding-cells = <0>;
       bindings = <&macro_ae>, <&macro_ae_cap>;
     };
     cap_ue: cap_ue {
       compatible = "zmk,behavior-mod-morph"; 
-      label = "cap_ue"; 
       mods = <(MOD_LSFT|MOD_RSFT)>; 
       #binding-cells = <0>;
       bindings = <&macro_ue>, <&macro_ue_cap>;
