@@ -3,14 +3,14 @@
     colon_if_shifted: colon_if_shifted {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp DOT &kp LS(DOT)>;
+      bindings = <&kp DOT &kp COLON>;
       mods = <0x03>; // MOD_LSFT (0x01) | MOD_RSFT (0x02)
     };
 
     semicolon_if_shifted: semicolon_if_shifted {
       compatible = "zmk,behavior-mod-morph";
       #binding-cells = <0>;
-      bindings = <&kp COMMA &kp LS(SEMI)>;
+      bindings = <&kp COMMA &kp SEMICOLON>;
       mods = <0x03>; // MOD_LSFT | MOD_RSFT
     };
 
