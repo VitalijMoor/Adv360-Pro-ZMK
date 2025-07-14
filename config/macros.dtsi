@@ -1,263 +1,287 @@
-macro_quotes: macro_quotes {
-  compatible = "zmk,behavior-macro";
-  label = "macro_quotes";
-  #binding-cells = <0>;
-  bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
-};
-macro_dquotes: macro_dquotes {
-  compatible = "zmk,behavior-macro";
-  label = "macro_dquotes";
-  #binding-cells = <0>;
-  bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
-};
-macro_braces: macro_braces {
-  compatible = "zmk,behavior-macro";
-  label = "macro_braces";
-  #binding-cells = <0>;
-  bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
-};
-macro_parens: macro_parens {
-  compatible = "zmk,behavior-macro";
-  label = "macro_parens";
-  #binding-cells = <0>;
-  bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
-};
-macro_brackets: macro_brackets {
-  compatible = "zmk,behavior-macro";
-  label = "macro_brackets";
-  #binding-cells = <0>;
-  bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
-};
-macro_kinesis: macro_kinesis {
-  compatible = "zmk,behavior-macro";
-  label = "macro_kinesis";
-  #binding-cells = <0>;
-  bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
-};
-Win_Cut: Windows_Cut {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LC(X)>;
-  display-name = "Windows Cut";
-};
+/ {
+  behaviors {
 
-Win_Copy: Windows_Copy {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LC(C)>;
-  display-name = "Windows Copy";
-};
+    macro_typed_unicode: macro_typed_unicode {
+      compatible = "zmk,behavior-macro-unicode";
+      #binding-cells = <1>;
+      label = "Unicode Input";
+    };
 
-Win_Paste: Windows_Paste {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LC(V)>;
-  display-name = "Windows Paste";
-};
+    // ── Utility Macros ──
+    macro_quotes: macro_quotes {
+      compatible = "zmk,behavior-macro";
+      label = "macro_quotes";
+      #binding-cells = <0>;
+      bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
+    };
 
-Win_Select_All: Windows_SelectAll {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LC(A)>;
-  display-name = "Windows Select All";
-};
+    macro_dquotes: macro_dquotes {
+      compatible = "zmk,behavior-macro";
+      label = "macro_dquotes";
+      #binding-cells = <0>;
+      bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
+    };
 
-Win_Undo: Windows_Undo {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LC(Z)>;
-  display-name = "Windows Undo";
-};
+    macro_braces: macro_braces {
+      compatible = "zmk,behavior-macro";
+      label = "macro_braces";
+      #binding-cells = <0>;
+      bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+    };
 
-Win_Desktop: Win_Desk {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(D)>;
-  display-name = "Windows Desktop";
-};
+    macro_parens: macro_parens {
+      compatible = "zmk,behavior-macro";
+      label = "macro_parens";
+      #binding-cells = <0>;
+      bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
+    };
 
-Win_File_Explorer: Win_Explr {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(E)>;
-  display-name = "Windows Explorer";
-};
+    macro_brackets: macro_brackets {
+      compatible = "zmk,behavior-macro";
+      label = "macro_brackets";
+      #binding-cells = <0>;
+      bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
+    };
 
-Win_Snip_Tool: Win_Snip {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LS(LG(S))>;
-  display-name = "Windows Screen Snip";
-};
+    macro_kinesis: macro_kinesis {
+      compatible = "zmk,behavior-macro";
+      label = "macro_kinesis";
+      #binding-cells = <0>;
+      bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
+    };
 
-Win_Show_All_Windows: Win_ShowAW {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(TAB)>;
-  display-name = "Windows Show All Windows";
-};
+    Double_Click: Double_Click {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&mkp MB1 &mkp MB1>;
+      display-name = "Double Click";
+    };
 
-Mac_Cut: Mac_Cut {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(X)>;
-  display-name = "Mac Cut";
-};
+    // ── Unicode Umlauts ──
+    umlaut_a: umlaut_a {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_typed_unicode 0x00E4>; // ä
+    };
 
-Mac_Copy: Mac_Copy {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(C)>;
-  display-name = "Mac Copy";
-};
+    umlaut_o: umlaut_o {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_typed_unicode 0x00F6>; // ö
+    };
 
-Mac_Paste: Mac_Paste {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(V)>;
-  display-name = "Mac Paste";
-};
+    umlaut_u: umlaut_u {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_typed_unicode 0x00FC>; // ü
+    };
 
-Mac_Undo: Mac_Undo {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(Z)>;
-  display-name = "Mac Undo";
-};
+    umlaut_ss: umlaut_ss {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_typed_unicode 0x00DF>; // ß
+    };
 
-Mac_Select_All: Mac_SelAll {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(A)>;
-  display-name = "Mac Select All";
-};
+    umlaut_a_cap: umlaut_a_cap {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_typed_unicode 0x00C4>; // Ä
+    };
 
-Mac_Mission_Control: Mac_ShowAW {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LC(UP_ARROW)>;
-  display-name = "Mac Show All Windows";
-};
+    umlaut_o_cap: umlaut_o_cap {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_typed_unicode 0x00D6>; // Ö
+    };
 
-Mac_Snip_Tool: Mac_Snip {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LC(LG(LS(NUMBER_4)))>;
-  display-name = "Mac Screen Snip";
-};
+    umlaut_u_cap: umlaut_u_cap {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_typed_unicode 0x00DC>; // Ü
+    };
 
-Win_Close_Program: Win_Close_Program {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LA(F4)>;
-  display-name = "Windows Close";
-};
+    // ── Windows Macros ──
+    Win_Cut: Windows_Cut {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(X)>;
+      display-name = "Windows Cut";
+    };
 
-Win_Settings_Menu: Win_Settings_Menu {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(I)>;
-  display-name = "Windows Settings";
-};
+    Win_Copy: Windows_Copy {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(C)>;
+      display-name = "Windows Copy";
+    };
 
-Win_Lock_PC: Win_Lock_PC {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(L)>;
-  display-name = "Windows Lock";
-};
+    Win_Paste: Windows_Paste {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(V)>;
+      display-name = "Windows Paste";
+    };
 
-Win_Tile_Left: Win_Tile_Left {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(LEFT)>;
-  display-name = "Windows Tile Left";
-};
+    Win_Select_All: Windows_SelectAll {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(A)>;
+      display-name = "Windows Select All";
+    };
 
-Win_Tile_Up: Win_Tile_Up {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(UP_ARROW)>;
-  display-name = "Windows Tile Up";
-};
+    Win_Undo: Windows_Undo {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(Z)>;
+      display-name = "Windows Undo";
+    };
 
-Win_Tile_Down: Win_Tile_Down {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(DOWN)>;
-  display-name = "Windows Tile Down";
-};
+    Win_Desktop: Win_Desk {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(D)>;
+      display-name = "Windows Desktop";
+    };
 
-Win_Tile_Right: Win_Tile_Right {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(RIGHT)>;
-  display-name = "Windows Tile Right";
-};
+    Win_File_Explorer: Win_Explr {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(E)>;
+      display-name = "Windows Explorer";
+    };
 
-Mac_Spotlight_Search: Mac_Spotlight_Search {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(SPACE)>;
-  display-name = "Mac Spotlight Search";
-};
+    Win_Snip_Tool: Win_Snip {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LS(LG(S))>;
+      display-name = "Windows Screen Snip";
+    };
 
-Mac_Close_Program: Mac_Close_Program {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(Q)>;
-  display-name = "Mac Close Program";
-};
+    Win_Show_All_Windows: Win_ShowAW {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(TAB)>;
+      display-name = "Windows Show All Windows";
+    };
 
-Mac_Strike_Through_Text: Mac_Strike_Through_Text {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&kp LG(LS(X))>;
-  display-name = "Mac Strikethrough Text";
-};
+    Win_Close_Program: Win_Close_Program {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LA(F4)>;
+      display-name = "Windows Close";
+    };
 
-Double_Click: Double_Click {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&mkp MB1 &mkp MB1>;
-  display-name = "Double Click";
-};
+    Win_Settings_Menu: Win_Settings_Menu {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(I)>;
+      display-name = "Windows Settings";
+    };
 
-/* ── Lowercase ── */
-umlaut_a: umlaut_a {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&macro_typed_unicode 0x00E4>; /* ä */
-};
-umlaut_o: umlaut_o {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&macro_typed_unicode 0x00F6>; /* ö */
-};
-umlaut_u: umlaut_u {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&macro_typed_unicode 0x00FC>; /* ü */
-};
-umlaut_ss: umlaut_ss {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&macro_typed_unicode 0x00DF>; /* ß */
-};
+    Win_Lock_PC: Win_Lock_PC {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(L)>;
+      display-name = "Windows Lock";
+    };
 
-/* ── Uppercase ── */
-umlaut_a_cap: umlaut_a_cap {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&macro_typed_unicode 0x00C4>; /* Ä */
-};
-umlaut_o_cap: umlaut_o_cap {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&macro_typed_unicode 0x00D6>; /* Ö */
-};
-umlaut_u_cap: umlaut_u_cap {
-  compatible = "zmk,behavior-macro";
-  #binding-cells = <0>;
-  bindings = <&macro_typed_unicode 0x00DC>; /* Ü */
+    Win_Tile_Left: Win_Tile_Left {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(LEFT)>;
+      display-name = "Windows Tile Left";
+    };
+
+    Win_Tile_Up: Win_Tile_Up {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(UP_ARROW)>;
+      display-name = "Windows Tile Up";
+    };
+
+    Win_Tile_Down: Win_Tile_Down {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(DOWN)>;
+      display-name = "Windows Tile Down";
+    };
+
+    Win_Tile_Right: Win_Tile_Right {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(RIGHT)>;
+      display-name = "Windows Tile Right";
+    };
+
+    // ── Mac Macros ──
+    Mac_Cut: Mac_Cut {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(X)>;
+      display-name = "Mac Cut";
+    };
+
+    Mac_Copy: Mac_Copy {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(C)>;
+      display-name = "Mac Copy";
+    };
+
+    Mac_Paste: Mac_Paste {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(V)>;
+      display-name = "Mac Paste";
+    };
+
+    Mac_Undo: Mac_Undo {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(Z)>;
+      display-name = "Mac Undo";
+    };
+
+    Mac_Select_All: Mac_SelAll {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(A)>;
+      display-name = "Mac Select All";
+    };
+
+    Mac_Mission_Control: Mac_ShowAW {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(UP_ARROW)>;
+      display-name = "Mac Show All Windows";
+    };
+
+    Mac_Snip_Tool: Mac_Snip {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LC(LG(LS(NUMBER_4)))>;
+      display-name = "Mac Screen Snip";
+    };
+
+    Mac_Spotlight_Search: Mac_Spotlight_Search {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(SPACE)>;
+      display-name = "Mac Spotlight Search";
+    };
+
+    Mac_Close_Program: Mac_Close_Program {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(Q)>;
+      display-name = "Mac Close Program";
+    };
+
+    Mac_Strike_Through_Text: Mac_Strike_Through_Text {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(LS(X))>;
+      display-name = "Mac Strikethrough Text";
+    };
+  };
 };
