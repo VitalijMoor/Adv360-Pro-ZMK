@@ -66,7 +66,7 @@
       bindings = <
         &kp ESC     &kp N1    &kp N2            &kp N3  &kp N4  &kp N5                       &tog 1                                                                     &mo 3  &kp N6   &kp N7        &kp N8    &kp N9     &kp N0  &kp QUESTION
         &kp TAB      &kp Q     &kp W             &kp E   &kp R   &kp T                        &none                                                                     &none   &kp Z    &kp U         &kp I     &kp O      &kp P      &cap_ue 
-        &kp BACKSPACE      &kp A     &kp S             &kp D   &kp F   &kp G            &macro_screenshot      &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL    &kp DEL   &kp H    &kp J         &kp K     &kp L   &cap_oe        &cap_ae
+        &kp BACKSPACE      &kp A     &kp S             &kp D   &kp F   &kp G            &none &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL    &kp DEL   &kp H    &kp J         &kp K     &kp L   &cap_oe        &cap_ae
         &kp LSHFT      &kp Y     &kp X             &kp C   &kp V   &kp B                        &none          &none  &kp HOME  &trans   &none  &kp PG_UP      &none      &none   &kp N    &kp M  &commasemi &dotcol &kp MINUS     &kp RSHFT
         &kp LCTRL      &kp GRAVE  &kp CAPS  &kp LEFT_COMMAND   &sl 4                            &kp SPACE  &macro_alfred   &kp END                  &kp PG_DN  &kp ENTER  &kp ENTER          &kp ESC         &kp LGUI  &kp LBKT   &kp RBKT         &kp RCTRL
       >;
